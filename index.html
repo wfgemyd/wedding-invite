@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Centered header nav (no brand) -->
     <header class="topbar">
       <div class="container topbar__inner">
         <nav class="nav">
@@ -18,21 +17,29 @@
         </nav>
       </div>
     </header>
-    <!-- Fireworks background canvas -->
-    <canvas id="bgFx" aria-hidden="true"></canvas>
+
     <main>
-      <!-- Section 1 -->
+      <!-- HERO / WELCOME -->
       <section id="welcome" class="section hero">
-        <div class="container">
-          <div class="reveal">
-            <p class="eyebrow">Wedding Invitation</p>
-            <h1>Daniel <span class="amp">&</span> Oksana</h1>
-            <p class="lead">Welcome to our wedding invitation.</p>
+        <!-- Fireworks only for welcome -->
+        <canvas id="heroFx" aria-hidden="true"></canvas>
+
+        <div class="container hero__inner">
+          <div class="reveal hero__content">
+            <h1 class="hero__names">
+              Daniel <span class="amp">&</span> Oksana
+            </h1>
+            <p class="hero__subtitle">Welcome to our wedding invitation.</p>
 
             <div class="hero__meta">
-              <div class="pill">Date: <span class="muted">TBD</span></div>
-              <div class="pill">City: <span class="muted">TBD</span></div>
-              <div class="pill">Dress code: <span class="muted">TBD</span></div>
+              <div class="meta-pill">
+                <div class="meta-label">Date</div>
+                <div class="meta-value">14/07/2026</div>
+              </div>
+              <div class="meta-pill">
+                <div class="meta-label">City</div>
+                <div class="meta-value">Praha</div>
+              </div>
             </div>
 
             <div class="hero__actions">
@@ -41,17 +48,14 @@
             </div>
           </div>
         </div>
-        <div class="hero__bg" aria-hidden="true"></div>
       </section>
 
-      <!-- Section 2 -->
+      <!-- COLORS -->
       <section id="colors" class="section">
         <div class="container">
           <div class="section__head reveal">
-            <h2>Colors</h2>
-            <p class="muted">
-              Click a palette to open references for that color set.
-            </p>
+            <h2>Wedding and outfit pallete</h2>
+            <p class="muted">Click a palette to open references.</p>
           </div>
 
           <div class="palette-grid">
@@ -61,11 +65,11 @@
               aria-label="Rose palette"
             >
               <div class="swatches-row">
-                <span class="swatch" style="--c: #c06c84"></span>
-                <span class="swatch" style="--c: #f67280"></span>
-                <span class="swatch" style="--c: #f8b195"></span>
-                <span class="swatch" style="--c: #355c7d"></span>
-                <span class="swatch" style="--c: #6c5b7b"></span>
+                <span class="swatch" style="--c: #f7cad0"></span>
+                <span class="swatch" style="--c: #f2a7b5"></span>
+                <span class="swatch" style="--c: #fff1f3"></span>
+                <span class="swatch" style="--c: #cba0aa"></span>
+                <span class="swatch" style="--c: #8b6f7a"></span>
               </div>
               <div class="palette-card__label">Rose</div>
             </a>
@@ -76,43 +80,13 @@
               aria-label="Sage palette"
             >
               <div class="swatches-row">
-                <span class="swatch" style="--c: #a3b18a"></span>
-                <span class="swatch" style="--c: #dad7cd"></span>
-                <span class="swatch" style="--c: #588157"></span>
-                <span class="swatch" style="--c: #3a5a40"></span>
-                <span class="swatch" style="--c: #344e41"></span>
+                <span class="swatch" style="--c: #dde9d7"></span>
+                <span class="swatch" style="--c: #bfd8b8"></span>
+                <span class="swatch" style="--c: #f7fbf5"></span>
+                <span class="swatch" style="--c: #8cb08c"></span>
+                <span class="swatch" style="--c: #5f7d64"></span>
               </div>
               <div class="palette-card__label">Sage</div>
-            </a>
-
-            <a
-              class="palette-card reveal"
-              href="color.html?palette=navy"
-              aria-label="Navy palette"
-            >
-              <div class="swatches-row">
-                <span class="swatch" style="--c: #0b1320"></span>
-                <span class="swatch" style="--c: #1c2541"></span>
-                <span class="swatch" style="--c: #3a506b"></span>
-                <span class="swatch" style="--c: #5bc0be"></span>
-                <span class="swatch" style="--c: #f4f1de"></span>
-              </div>
-              <div class="palette-card__label">Navy</div>
-            </a>
-
-            <a
-              class="palette-card reveal"
-              href="color.html?palette=champagne"
-              aria-label="Champagne palette"
-            >
-              <div class="swatches-row">
-                <span class="swatch" style="--c: #f7e7ce"></span>
-                <span class="swatch" style="--c: #ead2ac"></span>
-                <span class="swatch" style="--c: #c9a227"></span>
-                <span class="swatch" style="--c: #5d4037"></span>
-                <span class="swatch" style="--c: #faf3e0"></span>
-              </div>
-              <div class="palette-card__label">Champagne</div>
             </a>
 
             <a
@@ -121,25 +95,55 @@
               aria-label="Lavender palette"
             >
               <div class="swatches-row">
-                <span class="swatch" style="--c: #cdb4db"></span>
-                <span class="swatch" style="--c: #ffc8dd"></span>
-                <span class="swatch" style="--c: #ffafcc"></span>
-                <span class="swatch" style="--c: #bde0fe"></span>
-                <span class="swatch" style="--c: #a2d2ff"></span>
+                <span class="swatch" style="--c: #e9d7ff"></span>
+                <span class="swatch" style="--c: #d6c2ff"></span>
+                <span class="swatch" style="--c: #faf7ff"></span>
+                <span class="swatch" style="--c: #b8a4e3"></span>
+                <span class="swatch" style="--c: #7e6aa6"></span>
               </div>
               <div class="palette-card__label">Lavender</div>
+            </a>
+
+            <a
+              class="palette-card reveal"
+              href="color.html?palette=champagne"
+              aria-label="Champagne palette"
+            >
+              <div class="swatches-row">
+                <span class="swatch" style="--c: #fff3e2"></span>
+                <span class="swatch" style="--c: #f3dec3"></span>
+                <span class="swatch" style="--c: #fffbf4"></span>
+                <span class="swatch" style="--c: #d6b98c"></span>
+                <span class="swatch" style="--c: #8e6c3b"></span>
+              </div>
+              <div class="palette-card__label">Champagne</div>
+            </a>
+
+            <a
+              class="palette-card reveal"
+              href="color.html?palette=sky"
+              aria-label="Sky palette"
+            >
+              <div class="swatches-row">
+                <span class="swatch" style="--c: #d9f2ff"></span>
+                <span class="swatch" style="--c: #bee7ff"></span>
+                <span class="swatch" style="--c: #f7fcff"></span>
+                <span class="swatch" style="--c: #84bfe6"></span>
+                <span class="swatch" style="--c: #4c7da3"></span>
+              </div>
+              <div class="palette-card__label">Sky</div>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- Section 3 -->
+      <!-- PLAN -->
       <section id="plan" class="section section--alt">
         <div class="container">
           <div class="section__head reveal">
             <h2>The plan</h2>
             <p class="muted">
-              Replace placeholders with embedded Google Maps iframes.
+              Replace placeholders with your Google Maps embeds.
             </p>
           </div>
 
@@ -158,7 +162,7 @@
 
             <article class="card reveal">
               <h3>Free time</h3>
-              <p class="muted">Ideas: photos, walk, coffee, rest.</p>
+              <p class="muted">Photos, walk, coffee, rest.</p>
               <ul class="bullets">
                 <li>Start: <span class="muted">TBD</span></li>
                 <li>End: <span class="muted">TBD</span></li>
@@ -181,26 +185,18 @@
         </div>
       </section>
 
-      <!-- Section 4 -->
+      <!-- STORY -->
       <section id="story" class="section">
         <div class="container">
           <div class="section__head reveal">
             <h2>Our story</h2>
-            <p class="muted">
-              Add your text and replace placeholders with real images.
-            </p>
+            <p class="muted">Short + sweet. Add your photos below.</p>
           </div>
 
           <div class="story-grid">
             <div class="card reveal">
               <h3>How it started</h3>
-              <p>
-                Placeholder text. Keep it short and readable. One paragraph is
-                enough.
-              </p>
-              <p class="muted">
-                Tip: keep names and dates consistent everywhere.
-              </p>
+              <p>Write 4–6 lines. Keep it warm, simple, and personal.</p>
             </div>
 
             <div class="photo-grid reveal">

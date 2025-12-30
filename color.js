@@ -1,58 +1,49 @@
 const PALETTES = {
   rose: {
     name: "Rose",
-    colors: ["#C06C84", "#F67280", "#F8B195", "#355C7D", "#6C5B7B"],
+    colors: ["#F7CAD0", "#F2A7B5", "#FFF1F3", "#CBA0AA", "#8B6F7A"],
     refs: [
       { label: "Stationery inspiration (placeholder)", href: "#" },
-      { label: "Floral inspiration (placeholder)", href: "#" },
-      { label: "Typography pairing (placeholder)", href: "#" },
-      { label: "Table decor moodboard (placeholder)", href: "#" },
+      { label: "Flowers inspiration (placeholder)", href: "#" },
+      { label: "Decor moodboard (placeholder)", href: "#" },
     ],
   },
   sage: {
     name: "Sage",
-    colors: ["#A3B18A", "#DAD7CD", "#588157", "#3A5A40", "#344E41"],
+    colors: ["#DDE9D7", "#BFD8B8", "#F7FBF5", "#8CB08C", "#5F7D64"],
     refs: [
-      { label: "Sage/neutral invitation ideas (placeholder)", href: "#" },
-      { label: "Greenery decor references (placeholder)", href: "#" },
-      { label: "Minimalist layout examples (placeholder)", href: "#" },
-    ],
-  },
-  navy: {
-    name: "Navy",
-    colors: ["#0B1320", "#1C2541", "#3A506B", "#5BC0BE", "#F4F1DE"],
-    refs: [
-      { label: "Navy + teal palette examples (placeholder)", href: "#" },
-      { label: "Elegant dark theme invitations (placeholder)", href: "#" },
-      { label: "Button/CTA design references (placeholder)", href: "#" },
-    ],
-  },
-  champagne: {
-    name: "Champagne",
-    colors: ["#F7E7CE", "#EAD2AC", "#C9A227", "#5D4037", "#FAF3E0"],
-    refs: [
-      { label: "Warm neutral wedding palettes (placeholder)", href: "#" },
-      { label: "Gold foil stationery ideas (placeholder)", href: "#" },
-      { label: "Candlelit decor moodboard (placeholder)", href: "#" },
+      { label: "Sage invitations (placeholder)", href: "#" },
+      { label: "Greenery decor (placeholder)", href: "#" },
     ],
   },
   lavender: {
     name: "Lavender",
-    colors: ["#CDB4DB", "#FFC8DD", "#FFAFCC", "#BDE0FE", "#A2D2FF"],
+    colors: ["#E9D7FF", "#D6C2FF", "#FAF7FF", "#B8A4E3", "#7E6AA6"],
     refs: [
-      { label: "Pastel palette invitations (placeholder)", href: "#" },
-      { label: "Lavender floral inspiration (placeholder)", href: "#" },
-      { label: "Soft gradients UI references (placeholder)", href: "#" },
+      { label: "Lavender palettes (placeholder)", href: "#" },
+      { label: "Pastel wedding themes (placeholder)", href: "#" },
+    ],
+  },
+  champagne: {
+    name: "Champagne",
+    colors: ["#FFF3E2", "#F3DEC3", "#FFFBF4", "#D6B98C", "#8E6C3B"],
+    refs: [
+      { label: "Warm neutrals (placeholder)", href: "#" },
+      { label: "Gold details (placeholder)", href: "#" },
+    ],
+  },
+  sky: {
+    name: "Sky",
+    colors: ["#D9F2FF", "#BEE7FF", "#F7FCFF", "#84BFE6", "#4C7DA3"],
+    refs: [
+      { label: "Blue wedding inspiration (placeholder)", href: "#" },
+      { label: "Minimal airy decor (placeholder)", href: "#" },
     ],
   },
 };
 
-function getPaletteKey() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("palette") || "rose";
-}
-
-const key = getPaletteKey();
+const params = new URLSearchParams(location.search);
+const key = params.get("palette") || "rose";
 const palette = PALETTES[key] || PALETTES.rose;
 
 document.getElementById("paletteName").textContent = palette.name;
