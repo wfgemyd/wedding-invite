@@ -53,6 +53,10 @@ body {
   background: var(--bg);
 }
 
+main {
+  padding-top: var(--header-h);
+}
+
 /* Soft pastel background without seams */
 body::before {
   content: "";
@@ -91,8 +95,10 @@ body::before {
    HEADER / NAV
 ========================= */
 .topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   height: var(--header-h);
   backdrop-filter: blur(10px);
