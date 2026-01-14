@@ -148,7 +148,8 @@ const dict = {
     "gifts.p5":
       "Якщо вам усе ж хочеться прийти з квітами, можна принести одну квітку або гілочку від себе — будь-яку, що у вас асоціюється з нами. Наприкінці дня ми зберемо з них один спільний букет, і це буде для нас особливо цінно.",
     "gifts.p6": "Дякуємо за розуміння 🤍",
-
+    "palette.funky": "Літні яскраві кольори",
+    "colors.clickHint": "Натисніть, щоб відкрити приклади",
     "labels.time": "Час",
     "labels.address": "Адреса",
     "labels.start": "Початок",
@@ -224,6 +225,8 @@ const dict = {
     "gifts.p5":
       "Если вам все же хочется прийти с цветами, можно принести один цветок или веточку от себя — любой, который у вас ассоциируется с нами. В конце дня мы соберём из них один общий букет, и это будет для нас особенно ценно.",
     "gifts.p6": "Спасибо за понимание 🤍",
+    "palette.funky": "Летние яркие цвета",
+    "colors.clickHint": "Нажмите, чтобы открыть примеры",
 
     "labels.time": "Время",
     "labels.address": "Адрес",
@@ -516,6 +519,48 @@ applyLang(detectLang());
   );
 
   heroIO.observe(hero);
+})();
+// -------------------- Dress lightbox --------------------
+(() => {
+  const lb = document.getElementById("lightbox");
+  if (!lb) return;
+
+  const img = lb.querySelector(".lightbox__img");
+  const closeBtn = lb.querySelector(".lightbox__close");
+
+  function open(src, alt) {
+    img.src = src;
+    img.alt = alt || "Preview";
+    lb.classList.add("is-open");
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function close() {
+    lb.classList.remove("is-open");
+    lb.setAttribute("aria-hidden", "true");
+    img.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll('[data-lightbox="dress"]').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.getAttribute("data-src");
+      const alt = btn.querySelector("img")?.alt || "";
+      if (src) open(src, alt);
+    });
+  });
+
+  closeBtn?.addEventListener("click", close);
+
+  lb.addEventListener("click", (e) => {
+    // click outside image closes
+    if (e.target === lb) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
 })();
 
 (() => {})();
