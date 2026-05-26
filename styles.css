@@ -397,9 +397,28 @@ h3 {
   gap: 16px;
 }
 
-/* Modifier: Day 2 single column */
+/* Modifier: 2 cards side by side */
+.plan-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Modifier: Day 2 single column (kept for backwards-compat) */
 .plan-grid--day2 {
   grid-template-columns: 1fr;
+}
+
+/* Inline warning note inside a card */
+.note {
+  margin: 12px 0 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.note--warn {
+  background: rgba(255, 220, 200, 0.55);
+  border: 1px solid rgba(180, 90, 60, 0.25);
+  color: rgba(95, 35, 20, 0.92);
 }
 
 /* Day blocks */
@@ -950,5 +969,212 @@ h3 {
 @media (max-width: 720px) {
   .dress-tile img {
     height: 360px;
+  }
+}
+
+/* =========================
+   MOBILE: HAMBURGER + DRAWER
+========================= */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(42, 34, 48, 0.14);
+  border-radius: 999px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.22s ease, opacity 0.18s ease;
+}
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    #fff7fb 0%,
+    #fbeef4 50%,
+    #f4f8ff 100%
+  );
+  z-index: 49;
+  padding: 32px 24px;
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.mobile-menu.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mobile-menu__nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(42, 34, 48, 0.08);
+}
+
+/* =========================
+   MOBILE OVERRIDES (≤720)
+========================= */
+@media (max-width: 720px) {
+  :root {
+    --header-h: 60px;
+  }
+
+  .container {
+    width: min(var(--container), calc(100% - 28px));
+  }
+
+  .topbar__inner {
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* desktop nav stays hidden, replaced by drawer */
+  .nav {
+    display: none;
+  }
+
+  /* compact lang switch */
+  .lang-switch {
+    gap: 4px;
+  }
+  .lang-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* hero scaling */
+  .hero__names {
+    font-size: 64px;
+  }
+  .hero__subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .meta-pill {
+    min-width: 0;
+    flex: 1 1 140px;
+    padding: 12px 14px;
+  }
+  .meta-value {
+    font-size: 22px;
+  }
+  .hero__actions .btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  /* section padding */
+  .section {
+    padding: 56px 0;
+    min-height: auto;
+  }
+  .section__head h2 {
+    font-size: 34px;
+  }
+
+  /* cards & maps */
+  .card {
+    padding: 14px;
+  }
+  .map-embed {
+    height: 200px;
+  }
+  .bullets {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+
+  /* palette boards */
+  .palette-board {
+    padding: 14px;
+  }
+  .palette-board__title {
+    font-size: 24px;
+  }
+  .swatch-bar {
+    height: 48px;
+  }
+
+  /* dress tiles smaller height to fit phone */
+  .dress-tile img {
+    height: 280px;
+  }
+
+  /* story */
+  .story-card p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .day-title {
+    font-size: 24px;
+  }
+  .day-head {
+    padding: 12px 14px;
+  }
+
+  /* gifts copy tighter */
+  .gifts-card p {
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+}
+
+/* very small phones (≤380) */
+@media (max-width: 380px) {
+  .hero__names {
+    font-size: 54px;
+  }
+  .lang-btn {
+    padding: 5px 6px;
+    font-size: 11px;
+  }
+  .hero__meta {
+    gap: 8px;
+  }
+  .meta-pill {
+    flex: 1 1 120px;
   }
 }
