@@ -51,7 +51,8 @@ const dict = {
     "party.title": "Party place",
     "party.subtitle": "Dinner, speeches, and dancing.",
     "party.body":
-      "After the ceremony, drive straight here. Drinks, snacks, and a few fun activities will be waiting; it is the perfect time to meet the new family 🙂. The newlyweds will join shortly after the photoshoot.",
+      "After the ceremony, you can make your way to the restaurant. It opens at 15:00 with drinks, snacks, and a few fun activities waiting; the perfect time to meet the new family 🙂. We will join you around 15:30 to 16:00, after the photoshoot.",
+    "party.timeValue": "From 15:00",
 
     "labels.time": "Time",
     "labels.address": "Address",
@@ -110,7 +111,8 @@ const dict = {
     "party.title": "Місце святкування",
     "party.subtitle": "Вечеря, тости та танці.",
     "party.body":
-      "Після церемонії їдьте одразу сюди. На вас уже чекатимуть напої, закуски та кілька веселих активностей; це чудова нагода познайомитися з новою сім'єю 🙂. Молодята приєднаються одразу після фотосесії.",
+      "Після церемонії можете прямувати до ресторану. Він відкриється о 15:00, на вас чекатимуть напої, закуски та кілька веселих активностей; чудова нагода познайомитися з новою сім'єю 🙂. Ми приєднаємося приблизно о 15:30–16:00, одразу після фотосесії.",
+    "party.timeValue": "Від 15:00",
 
     "labels.time": "Час",
     "labels.address": "Адреса",
@@ -169,7 +171,8 @@ const dict = {
     "party.title": "Место празднования",
     "party.subtitle": "Ужин, тосты и танцы.",
     "party.body":
-      "После церемонии езжайте сразу сюда. Вас уже будут ждать напитки, закуски и пара весёлых активностей; отличный повод познакомиться с новой семьёй 🙂. Молодожёны присоединятся сразу после фотосессии.",
+      "После церемонии можете направляться в ресторан. Он откроется в 15:00, вас будут ждать напитки, закуски и пара весёлых активностей; отличный повод познакомиться с новой семьёй 🙂. Мы присоединимся примерно в 15:30–16:00, сразу после фотосессии.",
+    "party.timeValue": "С 15:00",
 
     "labels.time": "Время",
     "labels.address": "Адрес",
@@ -228,7 +231,8 @@ const dict = {
     "party.title": "Místo oslavy",
     "party.subtitle": "Večeře, přípitky a tanec.",
     "party.body":
-      "Po obřadu jeďte rovnou sem. Čekají na vás drinky, občerstvení a pár zábavných aktivit; skvělá příležitost poznat novou rodinu 🙂. Novomanželé se připojí krátce po focení.",
+      "Po obřadu se můžete vydat do restaurace. Otevírá v 15:00, čekají na vás drinky, občerstvení a pár zábavných aktivit; skvělá příležitost poznat novou rodinu 🙂. My se k vám přidáme přibližně mezi 15:30 a 16:00, hned po focení.",
+    "party.timeValue": "Od 15:00",
 
     "labels.time": "Čas",
     "labels.address": "Adresa",
@@ -287,7 +291,8 @@ const dict = {
     "party.title": "Miesto oslavy",
     "party.subtitle": "Večera, prípitky a tanec.",
     "party.body":
-      "Po obrade choďte rovno sem. Čakajú na vás drinky, občerstvenie a pár zábavných aktivít; výborná príležitosť spoznať novú rodinu 🙂. Novomanželia sa pripoja krátko po fotení.",
+      "Po obrade sa môžete vydať do reštaurácie. Otvára o 15:00, čakajú na vás drinky, občerstvenie a pár zábavných aktivít; výborná príležitosť spoznať novú rodinu 🙂. My sa k vám pridáme približne medzi 15:30 a 16:00, hneď po fotení.",
+    "party.timeValue": "Od 15:00",
 
     "labels.time": "Čas",
     "labels.address": "Adresa",
