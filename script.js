@@ -31,7 +31,7 @@ const dict = {
     "hero.ctaPlan": "See the plan",
     "hero.ctaPalette": "Pick a palette",
 
-    "colors.title": "Wedding Dark & Moody outfit palette",
+    "colors.title": "Wedding outfit palette",
     "colors.subtitle": "Click a palette to open references.",
     "palette.burgundy": "Deep Burgundy Choco",
     "palette.olive": "Sexy Olive",
@@ -103,7 +103,7 @@ const dict = {
     "hero.ctaPlan": "Дивитися план",
     "hero.ctaPalette": "Обрати палітру",
 
-    "colors.title": "Темна та атмосферна палітра образів",
+    "colors.title": "Aтмосферна палітра образів",
     "colors.subtitle": "Натисніть на палітру, щоб відкрити посилання.",
     "palette.burgundy": "Глибокий бордо та шоколад",
     "palette.olive": "Спокуслива олива",
@@ -177,7 +177,7 @@ const dict = {
     "hero.ctaPlan": "Смотреть план",
     "hero.ctaPalette": "Выбрать палитру",
 
-    "colors.title": "Тёмная и атмосферная палитра образов",
+    "colors.title": "Aтмосферная палитра образов",
     "colors.subtitle": "Нажмите на палитру, чтобы открыть ссылки.",
     "palette.burgundy": "Глубокий бордо и шоколад",
     "palette.olive": "Соблазнительная олива",
